@@ -24,22 +24,22 @@ Simplest Case
 
 ```handlebars
 {{icon-rating
-	value=value
-	onClick=(action (mut value))
+  value=value
+  onClick=(action (mut value))
 }}
 ```
 
 Full Example
 ```handlebars
 {{icon-rating
-	max=10
-	size=4
-	value=5
-	icon='dollar'
-	readOnly=true
-	baseColor='red'
-	fillColor='green'
-	onClick=(action 'updateValue')
+  max=10
+  size=4
+  value=5
+  icon='dollar'
+  readOnly=true
+  baseColor='red'
+  fillColor='green'
+  onClick=(action 'updateValue')
 }}
 ```
 
