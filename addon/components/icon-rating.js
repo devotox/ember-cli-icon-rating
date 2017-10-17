@@ -19,8 +19,6 @@ export default Component.extend({
 
 	readOnly: false,
 
-	useHalfStars: false,
-
 	fillColor: '#FFD700',
 
 	baseColor: '#BDBDBD',
