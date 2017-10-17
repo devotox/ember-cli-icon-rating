@@ -18,7 +18,7 @@
 				style=(html-safe (concat
 					'color: '
 					(if (or
-						(gt hover index)
+						(gte hover index)
 						(and (not hover) (gte value index))
 					) fillColor baseColor)
 				))

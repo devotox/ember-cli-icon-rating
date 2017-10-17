@@ -40,7 +40,7 @@ export default Component.extend({
 		},
 		mouseEnterHandler(index) {
 			!this.get('readOnly')
-				&& this.set('hover', index + 1);
+				&& this.set('hover', index);
 		},
 		mouseLeaveHandler() {
 			!this.get('readOnly')
