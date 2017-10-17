@@ -1,0 +1,28 @@
+<div
+	class='icon-rating-wrapper'
+	onmouseleave={{action 'mouseLeaveHandler'}}
+>
+	{{#each icons as |index|}}
+		<div
+			style='{{if width (html-safe (concat
+				'width: ' width
+			))}}'
+			class='icon-rating-icon-wrapper'
+		>
+			{{component
+				iconComponent icon
+				size=size
+				class='icon-rating'
+				click=(action 'clickHandler' index)
+				mouseEnter=(action 'mouseEnterHandler' index)
+				style=(html-safe (concat
+					'color: '
+					(if (or
+						(gt hover index)
+						(and (not hover) (gte value index))
+					) fillColor baseColor)
+				))
+			}}
+		</div>
+	{{/each}}
+</div>
