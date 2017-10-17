@@ -2,7 +2,7 @@
 
 [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-icon-rating.svg)](http://emberobserver.com/addons/ember-cli-icon-rating)
 [![Build Status](https://travis-ci.org/devotox/ember-cli-icon-rating.svg)](http://travis-ci.org/devotox/ember-cli-icon-rating)
-[![Coverage Status](https://coveralls.io/repos/github/devotox/mber-icon-rating/badge.svg)](https://coveralls.io/github/devotox/ember-cli-icon-rating)
+[![Coverage Status](https://codecov.io/gh/devotox/ember-cli-icon-rating/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-icon-rating)
 [![NPM Version](https://badge.fury.io/js/ember-cli-icon-rating.svg)](http://badge.fury.io/js/ember-cli-icon-rating)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-icon-rating.svg)](https://www.npmjs.org/package/ember-cli-icon-rating)
 [![Dependency Status](https://david-dm.org/poetic/ember-cli-icon-rating.svg)](https://david-dm.org/poetic/ember-cli-icon-rating)
