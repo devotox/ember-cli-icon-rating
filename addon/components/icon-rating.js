@@ -2,6 +2,10 @@ import Component from '@ember/component';
 
 import layout from '../templates/components/icon-rating';
 
+const ucfirst = (value) => {
+	return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
 const range = (left, right, step = 1, inclusive = true) => {
 	let range = [];
 	let ascending = left < right;
@@ -58,25 +62,21 @@ export default Component.extend({
 		const max = this.get('max');
 		const step = this.get('step');
 
-		this.setupIcon();
-		this.setupColor();
 		this.set('icons', range(min, max, step, true));
 	},
 
-	setupIcon() {
-		let icon = this.get('icon');
-
-		icon
-			&& this.set('baseIcon', icon)
-			&& this.set('fillIcon', icon);
+	didReceiveAttrs() {
+		this.setupProp('icon');
+		this.setupProp('color');
 	},
 
-	setupColor() {
-		let color = this.get('color');
+	setupProp(prop) {
+		let propValue = this.get(prop);
+		let ucProp = ucfirst(prop);
 
-		color
-			&& this.set('baseColor', color)
-			&& this.set('fillColor', color);
+		propValue
+			&& this.set(`base${ucProp}`, propValue)
+			&& this.set(`fill${ucProp}`, propValue);
 	},
 
 	actions: {
