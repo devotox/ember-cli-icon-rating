@@ -1,1 +1,1 @@
-.icon-rating-icon-wrapper,.icon-rating-wrapper{display:flex}.icon-rating-wrapper{padding:.2em 0;cursor:pointer;width:100%}.icon-rating-icon-wrapper{display:flex;justify-content:center}.icon-rating-icon{cursor:pointer}
+.icon-rating-icon-wrapper,.icon-rating-wrapper{display:flex}.icon-rating-wrapper{cursor:pointer;width:100%}.icon-rating-icon-wrapper{display:flex;flex-direction:column;justify-content:center}.icon-rating-icon,.icon-rating-value{display:flex;padding:.2em 0;flex-direction:row;justify-content:center}.icon-rating-value{font-weight:700}
