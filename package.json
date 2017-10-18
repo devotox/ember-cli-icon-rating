@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-icon-rating",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Icon (i.e. stars) rating input for ember applications",
   "keywords": [
     "ember-addon",
