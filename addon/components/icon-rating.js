@@ -2,8 +2,20 @@ import Component from '@ember/component';
 
 import layout from '../templates/components/icon-rating';
 
+const range = (left, right, inclusive) => {
+	let range = [];
+	let ascending = left < right;
+	let end = !inclusive ? right : ascending ? right + 1 : right - 1;
+	for (let i = left; ascending ? i < end : i > end; ascending ? i++ : i--) {
+		range.push(i);
+	}
+	return range;
+};
+
 export default Component.extend({
 	layout,
+
+	min: 1,
 
 	max: 5,
 
@@ -27,8 +39,9 @@ export default Component.extend({
 
 	init() {
 		this._super(...arguments);
+		const min = this.get('min');
 		const max = this.get('max');
-		this.set('icons', [...Array(max).keys()].map(i => i + 1));
+		this.set('icons', range(min, max, true));
 	},
 
 	actions: {

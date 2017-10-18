@@ -32,6 +32,7 @@ Simplest Case
 Full Example
 ```handlebars
 {{icon-rating
+  min=5
   max=10
   size=4
   value=5

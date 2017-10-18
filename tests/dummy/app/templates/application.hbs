@@ -1,8 +1,20 @@
 <h2 id="title">Ember CLI Icon Rating</h2>
 
+<h3>Value: {{value}}</h3>
+
 <h3>Default</h3>
-<span>(only component with onClick handler)</span>
 {{icon-rating
+	value=value
+	onClick=(action (mut value))
+}}
+
+<br/>
+<br/>
+<h3>Min - 5 Max - 10</h3>
+{{icon-rating
+	min=5
+	max=10
+	size='lg'
 	value=value
 	onClick=(action (mut value))
 }}
