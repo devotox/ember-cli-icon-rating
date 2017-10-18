@@ -10,7 +10,7 @@
 [![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-icon-rating.svg)](https://greenkeeper.io/)
 
 ## Description
-Rating Input that can use any [Font Awesome Icon](http://fontawesome.io/icons/) and defaults to using the icon icon
+Rating Input that can use any [Font Awesome Icon](http://fontawesome.io/icons/) and defaults to using the star icon
 
 [DEMO](http://devotox.github.io/ember-cli-icon-rating)
 
