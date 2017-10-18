@@ -36,6 +36,7 @@ Full Example (Defaults)
   max=5
   step=1
   value=0
+  width=0
   size='lg'
   readOnly=false
   baseIcon='star'
@@ -56,6 +57,7 @@ Full Example (Defaults)
 * max - Maximum icon value
 * readOnly - handlers will not run
 * value - Number of icons selected
+* width - Set width of individual icon container
 * step - How much each consecutive icon value is
 * showRatingAbove - Show Rating value above icon
 * showRatingBelow - Show Rating rating below icon
