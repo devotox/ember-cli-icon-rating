@@ -29,22 +29,54 @@ export default Component.extend({
 
 	size: 'lg',
 
-	icon: 'star',
+	icon: null,
+
+	color: null,
 
 	readOnly: false,
+
+	baseIcon: 'star',
+
+	fillIcon: 'star',
+
+	disableHover: false,
 
 	fillColor: '#FFD700',
 
 	baseColor: '#BDBDBD',
 
+	showRatingAbove: false,
+
+	showRatingBelow: false,
+
 	iconComponent: 'fa-icon',
 
 	init() {
 		this._super(...arguments);
+
 		const min = this.get('min');
 		const max = this.get('max');
 		const step = this.get('step');
+
+		this.setupIcon();
+		this.setupColor();
 		this.set('icons', range(min, max, step, true));
+	},
+
+	setupIcon() {
+		let icon = this.get('icon');
+
+		icon
+			&& this.set('baseIcon', icon)
+			&& this.set('fillIcon', icon);
+	},
+
+	setupColor() {
+		let color = this.get('color');
+
+		color
+			&& this.set('baseColor', color)
+			&& this.set('fillColor', color);
 	},
 
 	actions: {
@@ -54,10 +86,12 @@ export default Component.extend({
 		},
 		mouseEnterHandler(index) {
 			!this.get('readOnly')
+				&& !this.get('disableHover')
 				&& this.set('hover', index);
 		},
 		mouseLeaveHandler() {
 			!this.get('readOnly')
+				&& !this.get('disableHover')
 				&& this.set('hover', 0);
 		}
 	}

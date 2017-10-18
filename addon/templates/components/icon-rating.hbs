@@ -9,10 +9,20 @@
 			))}}'
 			class='icon-rating-icon-wrapper'
 		>
+			{{#if showRatingAbove}}
+				<div class='icon-rating-value'>
+					{{index}}
+				</div>
+			{{/if}}
+
 			{{component
-				iconComponent icon
+				iconComponent
+				(if (or
+						(gte hover index)
+						(and (not hover) (gte value index))
+				) fillIcon baseIcon)
 				size=size
-				class='icon-rating'
+				class='icon-rating-icon'
 				click=(action 'clickHandler' index)
 				mouseEnter=(action 'mouseEnterHandler' index)
 				style=(html-safe (concat
@@ -23,6 +33,12 @@
 					) fillColor baseColor)
 				))
 			}}
+
+			{{#if showRatingBelow}}
+				<div class='icon-rating-value'>
+					{{index}}
+				</div>
+			{{/if}}
 		</div>
 	{{/each}}
 </div>

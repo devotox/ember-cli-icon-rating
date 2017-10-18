@@ -3,7 +3,6 @@
 <h3>Value: {{value}}</h3>
 
 <br/>
-<br/>
 <h3>Default</h3>
 {{icon-rating
 	value=value
@@ -12,13 +11,25 @@
 
 <br/>
 <br/>
-<h3>Min - 5 / Max - 11 / Step - 2</h3>
+<h3>Min - 2 / Max - 10 / Step - 2</h3>
 {{icon-rating
-	min=5
-	max=11
+	min=2
+	max=10
 	step=2
-	size='lg'
 	value=value
+	onClick=(action (mut value))
+}}
+
+<br/>
+<br/>
+<h3>Disable Hover / Show Rating Above &amp; Below</h3>
+{{icon-rating
+	max=10
+	size='2'
+	value=value
+	disableHover=true
+	showRatingAbove=true
+	showRatingBelow=true
 	onClick=(action (mut value))
 }}
 
@@ -43,13 +54,26 @@
 
 <br/>
 <br/>
-<h3>Different Colors</h3>
+<h3>Different Fill &amp; Base Color / Single Icon</h3>
 {{icon-rating
 	max=10
 	size=4
 	value=5
+	icon='bug'
 	baseColor='red'
 	fillColor='green'
+}}
+
+<br/>
+<br/>
+<h3>Different Fill &amp; Base Icon / Single Color</h3>
+{{icon-rating
+	max=10
+	size=5
+	value=9
+	color='red'
+	fillIcon='heart'
+	baseIcon='heart-o'
 }}
 
 <br/>
@@ -59,15 +83,6 @@
 	max=10
 	size=5
 	value=7
+	icon='usd'
 	width='10%'
-}}
-
-<br/>
-<br/>
-<h3>Different Icon</h3>
-{{icon-rating
-	max=10
-	size=5
-	value=9
-	icon='dollar'
 }}

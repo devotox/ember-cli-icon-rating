@@ -4,16 +4,25 @@
 }
 
 .icon-rating-wrapper {
-	padding: 0.2em 0;
 	cursor: pointer;
 	width: 100%;
+
 }
 
 .icon-rating-icon-wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
-.icon-rating-icon {
-	cursor: pointer;
+.icon-rating-icon,
+.icon-rating-value {
+	display: flex;
+	padding: 0.2em 0;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.icon-rating-value {
+	font-weight: bold;
 }
