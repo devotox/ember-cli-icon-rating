@@ -2,6 +2,20 @@ import Component from '@ember/component';
 
 import layout from '../templates/components/icon-rating';
 
+const ucfirst = (value) => {
+	return value.charAt(0).toUpperCase() + value.slice(1);
+};
+
+const range = (left, right, step = 1, inclusive = true) => {
+	let range = [];
+	let ascending = left < right;
+	let end = !inclusive ? right : ascending ? right + 1 : right - 1;
+	for (let i = left; ascending ? i < end : i > end; ascending ? i += step : i -= step) {
+		range.push(i);
+	}
+	return range;
+};
+
 export default Component.extend({
 	layout,
 
@@ -48,7 +62,7 @@ export default Component.extend({
 		const max = this.get('max');
 		const step = this.get('step');
 
-		this.set('icons', this.range(min, max, step, true));
+		this.set('icons', range(min, max, step, true));
 	},
 
 	didReceiveAttrs() {
@@ -56,24 +70,9 @@ export default Component.extend({
 		this.setupProp('color');
 	},
 
-	ucfirst(value) {
-		return value.charAt(0).toUpperCase() + value.slice(1);
-	},
-
-	range(left, right, step = 1, inclusive = true) {
-		let range = [];
-		let ascending = left < right;
-		let end = !inclusive ? right : ascending ? right + 1 : right - 1;
-		for (let i = left; ascending ? i < end : i > end; ascending ? i += step : i -= step) {
-			range.push(i);
-		}
-
-		return range;
-	},
-
 	setupProp(prop) {
 		let propValue = this.get(prop);
-		let ucProp = this.ucfirst(prop);
+		let ucProp = ucfirst(prop);
 
 		propValue
 			&& this.set(`base${ucProp}`, propValue)
