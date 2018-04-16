@@ -9,7 +9,7 @@ cache:
   yarn: true
 env:
   matrix:
-  - EMBER_TRY_SCENARIO=ember-lts-2.12
+  # - EMBER_TRY_SCENARIO=ember-lts-2.12
   - EMBER_TRY_SCENARIO=ember-lts-2.16
   - EMBER_TRY_SCENARIO=ember-lts-2.18
   - EMBER_TRY_SCENARIO=ember-release
