@@ -33,7 +33,7 @@ export default Component.extend({
 
 	size: 'lg',
 
-	icon: null,
+	icon: '',
 
 	color: null,
 
