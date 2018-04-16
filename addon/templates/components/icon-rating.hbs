@@ -15,24 +15,27 @@
 				</div>
 			{{/if}}
 
-			{{component
-				iconComponent
-				(if (or
-						(gte hover index)
-						(and (not hover) (gte value index))
-				) fillIcon baseIcon)
-				size=size
+			<div
 				class='icon-rating-icon'
-				click=(action 'clickHandler' index)
-				mouseEnter=(action 'mouseEnterHandler' index)
-				style=(html-safe (concat
+				onclick={{action 'clickHandler' index}}
+				onmouseenter={{action 'mouseEnterHandler' index}}
+				style={{html-safe (concat
 					'color: '
 					(if (or
 						(gte hover index)
 						(and (not hover) (gte value index))
 					) fillColor baseColor)
-				))
-			}}
+				)}}
+			>
+				{{component
+					iconComponent
+					(if (or
+						(gte hover index)
+						(and (not hover) (gte value index))
+					) fillIcon baseIcon)
+					size=size
+				}}
+			</div>
 
 			{{#if showRatingBelow}}
 				<div class='icon-rating-value'>

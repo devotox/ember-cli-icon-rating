@@ -82,7 +82,7 @@ export default Component.extend({
 	actions: {
 		clickHandler(index) {
 			!this.get('readOnly')
-				&& this.sendAction('onClick', index);
+				&& this.sendAction('onClick', index); // eslint-disable-line
 		},
 		mouseEnterHandler(index) {
 			!this.get('readOnly')

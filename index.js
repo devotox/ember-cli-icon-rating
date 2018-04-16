@@ -1,15 +1,10 @@
-/* eslint-env node */
+'use strict';
 
 module.exports = {
     name: 'ember-cli-icon-rating',
-    otherAssetPaths: [],
 
     options: {
-        fingerprint: {
-            enabled: false
-        },
         babel: {
-            plugins: ['transform-object-rest-spread']
         },
         'ember-cli-babel': {
             compileModules: true,
@@ -18,13 +13,10 @@ module.exports = {
         },
         'ember-font-awesome': {
             useScss: true,
+            includeComponent: true,
             includeFontFiles: true,
             removeUnusedIcons: false,
             includeFontAwesomeAssets: true
         }
-    },
-
-    included() {
-        this._super.included.apply(this, arguments);
     }
 };
