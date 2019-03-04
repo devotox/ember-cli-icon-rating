@@ -55,6 +55,8 @@ export default Component.extend({
 
 	iconComponent: 'fa-icon',
 
+	onClick() { },
+
 	init() {
 		this._super(...arguments);
 
@@ -82,7 +84,7 @@ export default Component.extend({
 	actions: {
 		clickHandler(index) {
 			!this.get('readOnly')
-				&& this.sendAction('onClick', index); // eslint-disable-line
+				&& this.onClick(index);
 		},
 		mouseEnterHandler(index) {
 			!this.get('readOnly')
