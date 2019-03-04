@@ -20,6 +20,7 @@
     "lint:js": "eslint .",
     "build": "ember build",
     "start": "ember serve",
+    "preversion": "npm test",
     "precommit": "lint-staged",
     "update": "ncu -u -a; yarn",
     "test:all": "ember try:each",
