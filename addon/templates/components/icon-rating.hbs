@@ -1,7 +1,9 @@
+{{! template-lint-disable no-invalid-interactive no-inline-styles }}
 <div
   class="icon-rating-wrapper"
   onmouseleave={{action "mouseLeaveHandler"}}
 >
+  {{! template-lint-enable no-invalid-interactive }}
   {{#each icons as |index|}}
     <div
       class="icon-rating-icon-wrapper"
@@ -16,6 +18,7 @@
       {{/if}}
 
       <div
+        role="button"
         class="icon-rating-icon"
         onclick={{action "clickHandler" index}}
         onmouseenter={{action "mouseEnterHandler" index}}
