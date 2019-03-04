@@ -1,47 +1,47 @@
 <div
-	class='icon-rating-wrapper'
-	onmouseleave={{action 'mouseLeaveHandler'}}
+  class="icon-rating-wrapper"
+  onmouseleave={{action "mouseLeaveHandler"}}
 >
-	{{#each icons as |index|}}
-		<div
-			style='{{if width (html-safe (concat
-				'width: ' width
-			))}}'
-			class='icon-rating-icon-wrapper'
-		>
-			{{#if showRatingAbove}}
-				<div class='icon-rating-value'>
-					{{index}}
-				</div>
-			{{/if}}
+  {{#each icons as |index|}}
+    <div
+      class="icon-rating-icon-wrapper"
+      style={{if width (html-safe (concat
+        "width: " width
+      ))}}
+    >
+      {{#if showRatingAbove}}
+        <div class="icon-rating-value">
+          {{index}}
+        </div>
+      {{/if}}
 
-			<div
-				class='icon-rating-icon'
-				onclick={{action 'clickHandler' index}}
-				onmouseenter={{action 'mouseEnterHandler' index}}
-				style={{html-safe (concat
-					'color: '
-					(if (or
-						(gte hover index)
-						(and (not hover) (gte value index))
-					) fillColor baseColor)
-				)}}
-			>
-				{{component
-					iconComponent
-					(if (or
-						(gte hover index)
-						(and (not hover) (gte value index))
-					) fillIcon baseIcon)
-					size=size
-				}}
-			</div>
+      <div
+        class="icon-rating-icon"
+        onclick={{action "clickHandler" index}}
+        onmouseenter={{action "mouseEnterHandler" index}}
+        style={{html-safe (concat
+          "color: "
+          (if (or
+            (gte hover index)
+            (and (not hover) (gte value index))
+          ) fillColor baseColor)
+        )}}
+      >
+        {{component
+          iconComponent
+          (if (or
+            (gte hover index)
+            (and (not hover) (gte value index))
+          ) fillIcon baseIcon)
+          size=size
+        }}
+      </div>
 
-			{{#if showRatingBelow}}
-				<div class='icon-rating-value'>
-					{{index}}
-				</div>
-			{{/if}}
-		</div>
-	{{/each}}
+      {{#if showRatingBelow}}
+        <div class="icon-rating-value">
+          {{index}}
+        </div>
+      {{/if}}
+    </div>
+  {{/each}}
 </div>

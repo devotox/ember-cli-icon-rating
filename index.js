@@ -1,8 +1,9 @@
 'use strict';
 
-module.exports = {
-    name: 'ember-cli-icon-rating',
+const { name } = require('./package');
 
+module.exports = {
+    name,
     options: {
         babel: {
         },
