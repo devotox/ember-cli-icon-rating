@@ -5,8 +5,6 @@ const { name } = require('./package');
 module.exports = {
     name,
     options: {
-        babel: {
-        },
         'ember-cli-babel': {
             compileModules: true,
             includePolyfill: true,
