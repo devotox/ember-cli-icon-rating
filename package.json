@@ -20,7 +20,7 @@
     "lint:js": "eslint .",
     "build": "ember build",
     "start": "ember serve",
-    "preversion": "npm test",
+    "preversion": "npm run lint:hbs && npm run lint:js && npm test",
     "precommit": "lint-staged",
     "update": "ncu -u -a; yarn",
     "test:all": "ember try:each",
@@ -46,7 +46,7 @@
     ]
   },
   "dependencies": {
-    "ember-cli-babel": "7.5.0",
+    "ember-cli-babel": "7.6.0",
     "ember-cli-htmlbars": "3.0.1",
     "ember-cli-sass": "10.0.0"
   },
@@ -79,7 +79,7 @@
     "eslint-plugin-ember": "6.2.0",
     "eslint-plugin-node": "8.0.1",
     "loader.js": "4.7.0",
-    "sass": "1.17.2"
+    "sass": "1.17.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",

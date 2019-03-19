@@ -31,17 +31,31 @@ export default Component.extend({
 
 	hover: 0,
 
+	rotate: 0,
+
 	size: 'lg',
 
 	icon: null,
 
+	spin: false,
+
+	pulse: false,
+
 	color: null,
+
+	border: false,
+
+	inverse: false,
+
+	pull: undefined, // left or right
 
 	readOnly: false,
 
 	baseIcon: 'star',
 
 	fillIcon: 'star',
+
+	fixedWidth: false,
 
 	disableHover: false,
 
