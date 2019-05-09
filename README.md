@@ -3,8 +3,8 @@
 [![Coverage Status](https://codecov.io/gh/devotox/ember-cli-icon-rating/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-icon-rating)
 [![NPM Version](https://badge.fury.io/js/ember-cli-icon-rating.svg)](http://badge.fury.io/js/ember-cli-icon-rating)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-icon-rating.svg)](https://www.npmjs.org/package/ember-cli-icon-rating)
-[![Dependency Status](https://david-dm.org/poetic/ember-cli-icon-rating.svg)](https://david-dm.org/poetic/ember-cli-icon-rating)
-[![DevDependency Status](https://david-dm.org/poetic/ember-cli-icon-rating/dev-status.svg)](https://david-dm.org/poetic/ember-cli-icon-rating#info=devDependencies)
+[![Dependency Status](https://david-dm.org/devotox/ember-cli-icon-rating.svg)](https://david-dm.org/devotox/ember-cli-icon-rating)
+[![DevDependency Status](https://david-dm.org/devotox/ember-cli-icon-rating/dev-status.svg)](https://david-dm.org/devotox/ember-cli-icon-rating#info=devDependencies)
 [![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-icon-rating.svg)](https://greenkeeper.io/)
 
 ember-cli-icon-rating
